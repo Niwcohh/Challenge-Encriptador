@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Encriptador</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="/assets/img/Logo.svg" type="image/x-icon">
+
+</head>
+<body>
+    <header class="header__container">
+        <div class="header__image">        
+            <img src="/assets/img/Logo.svg" alt="Logo AluraLATAM en color azul">
+        </div>
+    </header>
+    <main class="contenedor__encriptador">
+        <section class="input__encriptador">
+            <textarea name="mensaje" class="input__texto" placeholder="Ingrese el texto aqui"></textarea>
+            <p class="advertencia__encriptador"><i class='bx bxs-info-circle'></i>Solo letras minusculas y sin acentos</p>
+            <div class="btn__container">
+                <button class="btn btn__encriptar">Encriptar</button>
+                <button class="btn btn__desencriptar">Desencriptar</button>
+            </div>
+        </section>
+        <aside class="output__container">
+            <div class="output__result__container">
+                <img src="assets/img/Muñeco.png" class="output__image" alt="">
+                <div class="loader hidden"></div>
+                <h2 class="output__title">Ningún mensaje fue<br>encontrado</h2>
+                <p class="output__text">Ingresa el texto que desees encriptar o<br>desencriptar.</p>
+                <div class="output__btn">
+                    <button class="btn btn__copiar hidden ">Copiar</button>
+                </div>
+            </div>
+        </aside>
+    </main>
+    <footer class="footer__container">
+        <p>Desarrollado por Nicole Weyerstall</p>
+    </footer>
+</body>
+<script src="js/main.js"></script>
+</html>

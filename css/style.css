@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+    --backgroundGeneral: #F3F5FC;
+    --btnColor: #0A3871;
+    --btnBorder: #D8DFE8;
+    --principalFont: "Inter", sans-serif;
+    --colorPrincipal: #0A3871;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--backgroundGeneral);
+    font-family: var(--principalFont);
+}
+
+.header__container{
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.header__image{
+    position: absolute;
+    padding: 2rem;
+}
+
+.contenedor__encriptador{
+    display: flex;
+    justify-content: space-evenly;
+    /* height: 100%; */
+}
+
+.input__texto{
+    border: none;
+    background-color: var(--backgroundGeneral);
+    height: 65vh;
+    width: 680px;
+    font-size: 2rem;
+    color: var(--colorPrincipal);
+    outline: none;
+    overflow: auto;
+    resize: none;
+    padding: 1rem;
+    margin-top: 10rem;
+}
+.input__texto::placeholder {
+    color: var(--colorPrincipal);
+}
+.input__texto::-webkit-scrollbar{
+    width: 0.5rem;
+}
+.input__texto::-webkit-scrollbar-track{
+    background: var(--backgroundGeneral);
+}
+.input__texto::-webkit-scrollbar-thumb{
+    background: var(--colorPrincipal);
+    border-radius: 1rem;
+}
+
+.input__texto::placeholder {
+    transition: color 0.3s ease;
+}
+
+.input__texto:focus::placeholder {
+    color: #ccc; /* Cambia el color cuando el campo tiene foco */
+}
+
+.advertencia__encriptador{
+    font-size: 0.75rem;
+    color: #495057;
+}
+
+i{
+    font-size: 0.75rem;
+    padding: 0.2rem;
+}
+
+.btn__container{
+    display: flex;
+    align-items: centers;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1.5rem;
+}
+
+.btn{
+    padding: 1.5rem;
+    width: 20.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid var(--colorPrincipal);
+    background-color: var(--btnBorder);
+    font-size: 1rem;
+    color: var(--colorPrincipal);
+    cursor: pointer;
+}
+
+.btn__encriptar{
+    background: var(--colorPrincipal);
+    color: white;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}   
+
+.btn__encriptar:hover {
+    transform: scale(1.05); /* Aplica un ligero zoom del 5% */
+    background-color: #1c5a9e; /* Cambia el color de fondo en hover */
+}
+
+.btn__desencriptar{
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn__desencriptar:hover{
+    transform: scale(1.05); /* Aplica un ligero zoom del 5% */
+}
+
+.btn__copiar{  
+    background: white;
+}
+.btn__copiar:hover{  
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    transform: scale(1.05); /* Aplica un ligero zoom del 5% */
+}
+
+.output__container{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    height: 92vh;
+    margin-top: 2rem;
+    border-radius: 2rem;
+    width: 25rem;
+    box-shadow: 0 1px 2rem rgba(0, 0, 0, 0.2); 
+}
+
+.output__result__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.output__title{
+    font-size: 1.5rem;
+}
+
+.output__text{
+    font-size: 1rem;
+    color: #495057;
+}
+
+.footer__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--colorPrincipal);
+    padding: 2rem;
+    color: white;
+    margin-top: 5rem;
+}
+.hidden{
+    display: none;
+}
+
+.loader {
+    width: 60px;
+    aspect-ratio: 4;
+    --c:#000 90%,#0000;
+    background: 
+      radial-gradient(circle closest-side at left  6px top 50%,var(--c)),
+      radial-gradient(circle closest-side                     ,var(--c)),
+      radial-gradient(circle closest-side at right 6px top 50%,var(--c));
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    animation: l4 1s infinite alternate;
+}
+@keyframes l4 {
+        to{width:25px;aspect-ratio: 1}
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
+@media (max-width: 1024px){
+    .contenedor__encriptador{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .input__texto{
+        width: 90%;
+    }
+    .output__container{
+        width: 90%;
+        height: 25vh;
+    }
+    .output__image{
+        display: none;
+    }
+    .output__result__container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px){
+    .btn__container{
+        /* gap: 0.5rem; */
+        flex-direction: column;
+        align-items: center;
+    }
+}
